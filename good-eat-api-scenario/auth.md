@@ -8,8 +8,7 @@ curl -H "Content-Type: application/json" \
   --request POST \
   -d '{ "username": "test", "password": "test" }' \
   http://localhost/login
-```
-{{execute T1}}
+```{{execute T1}}
 
 It will return a JWT Token. The token will be used in the other endpoints. We can save the token into a variable.
 
@@ -18,5 +17,7 @@ It will return a JWT Token. The token will be used in the other endpoints. We ca
 **Important: You need to copy and paste the JWT here manually**
 
 ### To get the restaurant information with id 00001
-`curl --location --request GET 'localhost/eats/00001' \
-  --header 'Authorization: Bearer $JWT_VAR'`{{execute T1}}
+```
+curl --location --request GET 'localhost/eats/00001' \
+  --header 'Authorization: Bearer $JWT_VAR'
+```{{execute T1}}
