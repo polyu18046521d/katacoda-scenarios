@@ -3,13 +3,13 @@ To get more familiar with the microservice, we can try different API endpoints t
 Our microservice currently provide these API endpoints:
 > POST /login - login the service 
 >
-> GET /eats/\<store_id\> - get the menu, store name, opening status of a restaurant
+> GET /eats/[store_id] - get the menu, store name, opening status of a restaurant
 >
-> POST /eats/\<store_id\>/menu - update the menu of a restaurant
+> POST /eats/[store_id]/menu - update the menu of a restaurant
 >
 > POST /eats/order - create a order
 >
-> GET /eats/order/\<order_id\> - check the order
+> GET /eats/order/[order_id] - check the order
 
 All the microservice requires authentication, and we need to login to get the JWT (JSON Web Tokens) by using the `/login` endpoints.
 
@@ -45,7 +45,8 @@ curl --location --request POST 'localhost/eats/00001/menu' \
 ```{{execute T1}}
 
 ## To add a new order
-```curl --location --request POST 'localhost/eats/order' \
+```
+curl --location --request POST 'localhost/eats/order' \
   --header 'Authorization: Bearer $JWT_VAR' \
   --header 'Content-Type: application/json' \
   --data-raw '{

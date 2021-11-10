@@ -22,6 +22,10 @@
         "text": "api-gateway.md"
       },
       {
+        "title": "Authentication",
+        "text": "auth.md"
+      },
+      {
         "title": "API Server",
         "text": "api-server.md"
       },
