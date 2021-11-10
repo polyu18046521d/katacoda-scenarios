@@ -16,6 +16,42 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "api-gateway",
+        "text": "api-gateway.md"
+      },
+      {
+        "title": "cqrs",
+        "text": "cqrs.md"
+      },
+      {
+        "title": "load-balancer",
+        "text": "load-balancer.md"
+      },
+      {
+        "title": "api-server",
+        "text": "api-server.md"
+      },
+      {
+        "title": "efk.",
+        "text": "efk.md "
+      },
+      {
+        "title": "logs",
+        "text": "logs.md"
+      },
+      {
+        "title": "circuitbreaker",
+        "text": "circuitbreaker.md"
+      },
+      {
+        "title": "event-based",
+        "text": "event-based.md"
+      },
+      {
+        "title": "prometheus_grafana",
+        "text": "prometheus_grafana.md"
       }
     ],
     "intro": {

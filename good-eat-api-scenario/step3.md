@@ -32,7 +32,7 @@ It will return a JWT Token. The token will be used in the other endpoints. We ca
   --header 'Authorization: Bearer $JWT_VAR'`{{execute T1}}
 
 
-## To add a new menu on the store 00001
+## To add a new menu (Lunch Set D) on the store 00001
 `curl --location --request POST 'localhost/eats/00001/menu' \
   --header 'Authorization: Bearer $JWT_VAR' \
   --header 'Content-Type: application/json' \
@@ -42,3 +42,26 @@ It will return a JWT Token. The token will be used in the other endpoints. We ca
       "price": "150"
   }'`{{execute T1}}
 
+## To add a new order
+`curl --location --request POST 'localhost/eats/order' \
+  --header 'Authorization: Bearer $JWT_VAR' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+      "store_id": "00001",
+      "details": [
+          {
+              "menu_id": "A",
+              "count": 1
+          }
+      ]
+  }'
+`{{execute T1}}
+
+It will return an order id, save it into the `$OID` variable for the next endpoint.
+
+`OID=<order-id>`
+
+## To get the detail of an order
+`curl --location --request GET localhost/eats/order/$OID \
+  --header 'Authorization: Bearer $JWT_VAR' \
+`{{execute T1}}
