@@ -33,6 +33,19 @@ having Total > 3
 ORDER BY Total desc 
 </pre>
 
+## Create Alert
+In the left panel, select `Alerting -> Notification channels`, press `Add Channel`.
+Details can be filled in your interest, and press `Save`.
+
+Go back to `New dashboard Copy`.
+Edit the traffic panel that we just created.
+Choose `Alert` tab, 
+evaluate every `5s` for `1s`
+when `max()` of `query(A, 1m, now)` is above `100`
+send to `grafana alert`.
+Press `Save`.	
+![alert](assets/brute-force-alert.png)
+
 ## Testing
 Open a shell in the mysql container:`docker exec -it mysql bash`{{execute T1}}
 
