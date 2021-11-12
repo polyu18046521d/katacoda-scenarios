@@ -1,0 +1,9 @@
+CREATE USER 'grafana'@'%' IDENTIFIED BY 'grafana';
+GRANT ALL PRIVILEGES ON *.* TO 'grafana'@'%' with GRANT OPTION;
+GRANT PROXY ON ''@'' TO 'grafana'@'%' WITH GRANT OPTION;
+
+CREATE USER 'insider'@'%' IDENTIFIED BY 'insider';
+GRANT ALL PRIVILEGES ON *.* TO 'insider'@'%' with GRANT OPTION;
+GRANT PROXY ON ''@'' TO 'insider'@'%' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;

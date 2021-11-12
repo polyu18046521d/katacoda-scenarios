@@ -1,7 +1,7 @@
-## Event-based Arechitecture (RabbitMQ)
+## Event-based Architecture (RabbitMQ)
 The event queue of the microservice is implemented with RabbitMQ. 
 
-We have inmplemented the database per servcie pattern. Each service has its own database, and some the tasks (HTTP POST request) requires the modification of multiple services. To make the tasks become asynchronize, event queue is used to make the request become asynchronous and the data will be eventually consistent.
+We have implemented the database per service pattern. Each service has its own database, and some the tasks (HTTP POST request) requires the modification of multiple services. To make the tasks become asynchronous, event queue is used to make the request become asynchronous and the data will be eventually consistent.
 
 For example, if you send a create order request:
 > 1. Tracking service will receive the request
