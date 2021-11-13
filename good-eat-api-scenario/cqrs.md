@@ -11,5 +11,4 @@ You can stop the menu-write-service by: `docker stop menu-write-api`{{execute T1
 and you can still use the HTTP GET request to query the menu data
 
 ## To get the restaurant information with id 00001
-`curl --location --request GET 'localhost/eats/00001' \
-  --header 'Authorization: Bearer $JWT_VAR'`{{execute T1}}
+`curl -H "Authorization: Bearer $jwt_var" --request GET http://localhost:8080/eats/00001`{{execute T1}}

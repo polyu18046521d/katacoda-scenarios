@@ -18,9 +18,7 @@ Also, the event queue will keep the task even there is not consumers (service do
 `docker stop order-api`{{execute T1}}
 
 ### To send a POST order request:
-`curl --location --request POST 'localhost/eats/order' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
+`curl -H "Authorization: Bearer $jwt_var" -H "Content-Type: application/json" -d '{
       "store_id": "00001",
       "details": [
           {
@@ -28,20 +26,17 @@ Also, the event queue will keep the task even there is not consumers (service do
               "count": 1
           }
       ]
-  }'
-`{{execute T1}}
+  }' --request POST http://localhost:8080/eats/order`{{execute T1}}
 
 ### To save the order id
-`OID2=<returned order id>`
+`oid2=<returned order id>`
 
 
 ### To check the recently added order:
-`curl --location --request GET localhost/eats/order/$OID2
-`{{execute T1}}
+`curl -H "Authorization: Bearer $jwt_var" --request GET http://localhost:8080/eats/order/$oid`{{execute T1}}
 
 ### Resume the order-service:
 `docker start order-api`{{execute T1}}
 
 ### Check the order again:
-`curl --location --request GET localhost/eats/order/$OID2
-`{{execute T1}}
+`curl -H "Authorization: Bearer $jwt_var" --request GET http://localhost:8080/eats/order/$oid`{{execute T1}}
