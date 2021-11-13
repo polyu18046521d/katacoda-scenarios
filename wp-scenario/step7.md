@@ -24,9 +24,9 @@ create a file call `too-many-queries.sh` with the following context:
 ```sh
 #!/bin/bash
 
-for ((i=0; i<=1; i++))
+for ((i=0; i<=100; i++))
 do
-  mysql --user="insider" --password="insider" --execute="SELECT * FROM wordpress.wp_users limit 1;"
+  mysql --user="insider" --password="insider" --execute="SELECT * FROM wordpress.wp_users limit 1;" > /dev/null
 done
 ```
 

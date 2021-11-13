@@ -55,7 +55,7 @@ create a file call `brute-force.sh` with the following context:
 
 for ((i=0; i<=1000; i++))
 do
-  mysql --user="insider" --password="insider" --execute="SELECT * FROM wordpress.wp_users limit 1;"
+  mysql --user="root" --password="wrongpassword" > /dev/null
 done
 ```
 
