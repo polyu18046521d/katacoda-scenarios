@@ -3,6 +3,10 @@ It prevents a single or multiple failure of services will have a cascading effec
 
 Current settings of the circuit breaker: OPEN when there is 5 continuous failure of the connections. Retry the connection after 3 seconds.
 
+> ## Good Practice (Resilience)
+> Microservices can handle the failture (e.g. Microservice down) that they invoke.
+> 
+
 To demo the usage of circuit breaker, we stop the store-service by:
 
 `docker stop store-load-balancer`{{execute T1}}
