@@ -7,7 +7,7 @@ The JWT will be generated when you input the correct username and password in th
 
 It will return a JWT Token. The token will be used in the other endpoints. We can save the token into a variable.
 
-`JWT_VAR=<token inside the result>`
+`jwt_var=<token inside the result>`
 
 **Important: You need to copy and paste the JWT here manually**
 

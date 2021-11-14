@@ -8,4 +8,4 @@ In our service, it is implemented with the NGINX.
 
 You can see the config of the load balancer of menu service by:
 
-`cat ./load-balancers/menu/nginx.conf`{{execute T1}}
+`cat ./load_balancers/menu/nginx.conf`{{execute T1}}

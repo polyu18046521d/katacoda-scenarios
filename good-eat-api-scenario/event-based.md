@@ -15,7 +15,7 @@ For example, if you send a create order request:
 Also, the event queue will keep the task even there is not consumers (service down), and resume when the service is up again.
 
 ### To stop the order service: 
-`docker stop order-api`{{execute T1}}
+`docker stop project-order-api`{{execute T1}}
 
 ### To send a POST order request:
 `curl -H "Authorization: Bearer $jwt_var" -H "Content-Type: application/json" -d '{
@@ -29,7 +29,7 @@ Also, the event queue will keep the task even there is not consumers (service do
   }' --request POST http://localhost:8080/eats/order`{{execute T1}}
 
 ### To save the order id
-`oid2=<returned order id>`
+`oid=<returned order id>`
 
 
 ### To check the recently added order:

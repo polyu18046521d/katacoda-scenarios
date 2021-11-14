@@ -10,7 +10,7 @@ To make sure the HTTP POST Operation is handled by the menu-write-service, and t
 
 The written data will be pass to the event queue and the menu-read-service database will be eventually same as the menu-write-service database.
 
-You can stop the menu-write-service by: `docker stop menu-write-api`{{execute T1}}
+You can stop the menu-write-service by: `docker stop project-menu-write-api`{{execute T1}}
 and you can still use the HTTP GET request to query the menu data
 
 ## To get the restaurant information with id 00001
